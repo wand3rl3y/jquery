@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div class="divi1">1</div>
+    <div class="divi2">2</div>
+
+    <script>
+        let divi1 = $('.divi1')
+
+        divi1.hide(5000).show(10000).fadeOut(10000)
+        $('.divi2').hide(10000).show(15000)
+        
+        // plugin
+        $.fn.fundoDoBody = function(){
+            this.css('background-color','green')
+            return this
+        }
+
+        $('body').fundoDoBody()
+    </script>
+</body>
